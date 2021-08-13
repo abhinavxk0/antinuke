@@ -24,6 +24,9 @@ for (const folder of commandFolders) {
 }
 client.once('ready', () => {
     console.log(`${client.user.tag} is online!`)
+    client.user.setActivity({
+        status: 'offline',
+        })
 })
 
 
