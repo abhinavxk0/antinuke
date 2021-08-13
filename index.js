@@ -25,7 +25,7 @@ for (const folder of commandFolders) {
 client.once('ready', () => {
     console.log(`${client.user.tag} is online!`)
     client.user.setPresence({
-        status: 'online'
+        status: 'invisible'
     })
         .catch(console.error);
 })
