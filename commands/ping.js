@@ -3,8 +3,6 @@ const moment = require('moment');
 module.exports = {
     name: 'ping',
     async execute(client, command, message, args, Discord){
-        if (message.author.id !== '776097608933441568') return 
-
         const generalAnti = client.channels.cache.get('875701174450397204')
         const errorLogs = client.channels.cache.get('875700619506241546')
 
@@ -13,6 +11,7 @@ module.exports = {
         const hours = (d.hours() == 1) ? `${d.hours()} hour` : `${d.hours()} hours`;
         const seconds = (d.seconds() == 1) ? `${d.seconds()} seconds` : `${d.seconds()} seconds`;
         const minutes = (d.minutes() == 1) ? `${d.minutes()} minutes` : `${d.minutes()} minutes`;
+        if (message.author.id !== '776097608933441568') return 
 
         try {
             generalAnti.send(

@@ -1,5 +1,4 @@
 module.exports = async (Discord, client, member) => {
-
     if (!member.user.bot) return;
     if (member.guild.id !== '768453184464748634') return;
 
@@ -16,8 +15,7 @@ module.exports = async (Discord, client, member) => {
     if (member.user.bot) {
         member.ban().catch(
             e => errorLogs.send(e)
-        ).then(
-            botautoBanLogs.send( 
+        ).then(botautoBanLogs.send( 
             new Discord.MessageEmbed()
                 .setDescription(`${executor} added ${target} to ${guild.name}.\n${target} was successfully banned by ${client.user}`)
                 .setColor('#00FFFF')
