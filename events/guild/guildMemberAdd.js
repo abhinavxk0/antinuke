@@ -1,4 +1,4 @@
-module.exports = async (client, Discord, member) => {
+module.exports = async (Discord, client, member) => {
     if (!member.user.bot) return;
     if (member.guild.id !== '768453184464748634') return;
 
