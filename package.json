@@ -14,6 +14,7 @@
     "discord-together": "^1.1.53",
     "discord.js": "^12.5.3",
     "distube": "^2.8.15",
+    "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
     "fs": "0.0.1-security",
     "imdb-api": "^4.4.1",
