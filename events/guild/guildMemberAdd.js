@@ -19,8 +19,8 @@ module.exports = async (Discord, client, member) => {
             new Discord.MessageEmbed()
                 .setDescription(`${executor} added ${target} to ${guild.name}.\n${target} was successfully banned by ${client.user}`)
                 .setColor('#00FFFF')
-                .addField('ID', executor.id)
-                .addField('Tag + Discriminator', executor.tag)
+                .addField('ID', `\`\`\`${executor.id}\`\`\``)
+                .addField('Tag + Discriminator', `\`\`\`${executor.id}\`\`\``)
         )).then(
             executor.send(`abe sasti nuker ki aulad apne aukat mein reh nai toh teri maa ki aisa gand marunga sath pushte bina gand ke niklenge`)
         ).catch(

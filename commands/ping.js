@@ -17,7 +17,7 @@ module.exports = {
             generalAnti.send(
                     new Discord.MessageEmbed()
                         .setTitle('Pong!')
-                        .setDescription(`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}`)
+                        .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\`\`\``)
                         .setColor('#00FFFF')
             )
         } catch (err) {
