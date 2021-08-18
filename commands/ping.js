@@ -17,7 +17,7 @@ module.exports = {
             let m = await message.lineReply(
                 new Discord.MessageEmbed()
                     .setTitle('Pong!')
-                    .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\nMessage Ping: Pinging...\`\`\``)
+                    .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nMessage Ping: Pinging...\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\`\`\``)
                     .setColor('#00FFFF')
             );
             let ping = (m.createdTimestamp - message.createdTimestamp);
@@ -25,7 +25,7 @@ module.exports = {
                 m.edit(
                     new Discord.MessageEmbed()
                         .setTitle('Pong!')
-                        .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\nMessage Ping: ${ping}ms\`\`\``)
+                        .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nMessage Ping: ${ping}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\`\`\``)
                         .setColor('#00FFFF')
                 )
         } catch (err) {
