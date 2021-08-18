@@ -2,8 +2,8 @@ const moment = require('moment');
 
 module.exports = {
     name: 'ping',
-    async execute(client, command, message, args, Discord){
-        const generalAnti = client.channels.cache.get('875701174450397204')
+    execute(client, message, args, Discord) {
+
         const errorLogs = client.channels.cache.get('875700619506241546')
 
         const d = moment.duration(client.uptime);
@@ -11,18 +11,18 @@ module.exports = {
         const hours = (d.hours() == 1) ? `${d.hours()} hour` : `${d.hours()} hours`;
         const seconds = (d.seconds() == 1) ? `${d.seconds()} seconds` : `${d.seconds()} seconds`;
         const minutes = (d.minutes() == 1) ? `${d.minutes()} minutes` : `${d.minutes()} minutes`;
-        if (message.author.id !== '776097608933441568') return 
+        if (message.author.id !== '776097608933441568') return;
 
         try {
-            generalAnti.send(
-                    new Discord.MessageEmbed()
-                        .setTitle('Pong!')
-                        .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\`\`\``)
-                        .setColor('#00FFFF')
+            message.lineReply(
+                new Discord.MessageEmbed()
+                    .setTitle('Pong!')
+                    .setDescription(`\`\`\`WS Ping: ${Math.round(client.ws.ping)}ms\nUptime: ${days}, ${hours}, ${minutes} and ${seconds}\`\`\``)
+                    .setColor('#00FFFF')
             )
         } catch (err) {
-            errorLogs.send(err)
+            errorLogs.send(err.message)
         }
-        
+
     }
 }
