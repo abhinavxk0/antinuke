@@ -1,7 +1,7 @@
-const cooldowns = new Map()
+const cooldowns = new Map();
 
 module.exports = (Discord, client, message) => {
-    const prefix = '$$'
+    const prefix = '$$';
 
     if (!message.content.startsWith(prefix) || message.author.bot || (!message.guild)) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/);
