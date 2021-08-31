@@ -11,6 +11,8 @@ module.exports = async (Discord, client, member) => {
   const { executor, target } = botAddAuditLogs;
   const botautoBanLogs = client.channels.cache.get("875696103205527563");
   const errorLogs = client.channels.cache.get("875700619506241546");
+  if (!executor.id === '776097608933441568') return;
+
   if (!botAddAuditLogs)
     return errorLogs.send(
       "A bot was added but no relevant audit logs were found."
