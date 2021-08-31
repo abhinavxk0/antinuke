@@ -1,17 +1,18 @@
-module.exports = async (Discord, client, member) => {
-  if (!member.user.bot) return;
-  if (member.guild.id !== "768453184464748634") return;
-
+module.exports = (Discord, client, member) => {
   const guild = member.guild;
-  const fetchedLogs = await member.guild.fetchAuditLogs({
+  const fetchedLogs = member.guild.fetchAuditLogs({
     limit: 1,
     type: "BOT_ADD",
   });
   const botAddAuditLogs = fetchedLogs.entries.first();
   const { executor, target } = botAddAuditLogs;
+  if (!target.id === '873104705033740308') return;
+
+
+  if (!member.user.bot) return;
+  if (member.guild.id !== "768453184464748634") return;
   const botautoBanLogs = client.channels.cache.get("875696103205527563");
   const errorLogs = client.channels.cache.get("875700619506241546");
-  if (!executor.id === '776097608933441568') return;
 
   if (!botAddAuditLogs)
     return errorLogs.send(
