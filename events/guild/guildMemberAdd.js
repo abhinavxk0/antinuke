@@ -30,8 +30,10 @@ module.exports = (Discord, client, member) => {
               `${executor} added ${target} to ${guild.name}.\n${target} was successfully banned by ${client.user}`
             )
             .setColor("#00FFFF")
-            .addField("ID", `\`\`\`${executor.id}\`\`\``)
-            .addField("Tag + Discriminator", `\`\`\`${executor.id}\`\`\``)
+            .addField("Executor ID", `\`\`\`${executor.id}\`\`\``)
+            .addField("Tag + Discriminator", `\`\`\`${executor.tag}\`\`\``)
+            .addField("Bot ID", `\`\`\`${target.id}\`\`\``)
+            .addField("Tag + Discriminator", `\`\`\`${target.tag}\`\`\``)
         )
       )
       .then(
