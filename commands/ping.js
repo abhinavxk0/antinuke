@@ -12,7 +12,6 @@ module.exports = {
       d.seconds() == 1 ? `${d.seconds()} seconds` : `${d.seconds()} seconds`;
     const minutes =
       d.minutes() == 1 ? `${d.minutes()} minutes` : `${d.minutes()} minutes`;
-    if (message.author.id !== "776097608933441568") return;
 
     try {
       let m = await message.lineReply(
