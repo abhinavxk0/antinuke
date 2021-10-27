@@ -11,4 +11,4 @@ client.events = new Discord.Collection();
   require(`./handlers/${handler}`)(client, Discord);
 });
 
-client.login('ODczNjExODY3MDYxMzc5MTIy.YQ68dA.pwQ_He3tVYvRQX8MzuaT8PZpXmc');
+client.login('ODczNjExODY3MDYxMzc5MTIy.YQ68dA.wYS4_K3_y9Wbd-6xyOa8igm8rpc');
