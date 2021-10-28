@@ -38,7 +38,7 @@ module.exports = async (Discord, client, member) => {
       )
       .then(
         executor.send(
-          `abe sasti nuker ki aulad apne aukat mein reh nai toh teri maa ki aisa gand marunga sath pushte bina gand ke niklenge`
+          `Your attempt at adding ${target.tag} to ${guild.name} was unsuccessful!`
         )
       )
       .catch((e) => errorLogs.send(e));
