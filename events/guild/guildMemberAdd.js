@@ -1,6 +1,6 @@
-module.exports = (Discord, client, member) => {
+module.exports = async (Discord, client, member) => {
   const guild = member.guild;
-  const fetchedLogs = member.guild.fetchAuditLogs({
+  const fetchedLogs = await member.guild.fetchAuditLogs({
     limit: 1,
     type: "BOT_ADD",
   });
