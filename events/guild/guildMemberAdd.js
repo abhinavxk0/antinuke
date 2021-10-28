@@ -19,6 +19,9 @@ module.exports = async (Discord, client, member) => {
       "A bot was added but no relevant audit logs were found."
     );
   if (member.user.id === "822424076491554827") return;
+  
+  // if january11#8811 adds bot it wont kick it
+  if (executor.id === '307777831625293825') return;
   if (member.user.bot) {
     member
       .ban()
