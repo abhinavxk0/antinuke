@@ -1,8 +1,14 @@
 const cooldowns = new Map();
+const db = require('quick.db')
 
-module.exports = (Discord, client, message) => {
-  const prefix = "$$";
-
+module.exports = async (Discord, client, message, guild) => {
+  let prefix;
+  let prefixes = await db.fetch(`prefix.${message.guild.id}`)
+  if (prefixes == null){
+    prefix = "$$";
+  } else {
+    prefix = prefixes;
+  }
   if (
     !message.content.startsWith(prefix) ||
     message.author.bot ||
